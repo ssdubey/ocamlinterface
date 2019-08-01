@@ -1,3 +1,7 @@
+ocamlc stdlib_stubs.c
+ocamlc -c slib.ml
+
+
 ocamlc -a -o mylib.cma -custom lib.a slib.cmo stdlib_stubs.o
 ocamlc -o prog mylib.cma eg.ml
 ./prog 
