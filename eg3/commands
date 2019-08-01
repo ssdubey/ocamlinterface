@@ -1,0 +1,11 @@
+ocamlc -a -o mylib.cma -custom lib.a slib.cmo stdlib_stubs.o
+ocamlc -o prog mylib.cma eg.ml
+./prog 
+
+OR
+
+ocamlc -custom -o prog lib.a slib.cmo eg.ml stdlib_stubs.o
+./prog 
+
+
+https://caml.inria.fr/pub/docs/manual-ocaml/intfc.html#sec454

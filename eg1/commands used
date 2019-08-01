@@ -1,0 +1,11 @@
+gcc -o lib.o -c lib.c
+
+ar -crv lib.a lib.o
+
+gcc -I ./ -o prog prog.c ./lib.a
+
+./prog
+
+https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_C_libraries.html
+
+https://codingfox.com/12-15-creating-a-library-file-in-linux/
