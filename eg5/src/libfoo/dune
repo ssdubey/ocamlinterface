@@ -1,0 +1,9 @@
+(data_only_dirs ("libfoo"))
+(rule
+ (deps (source_tree libfoo))
+ (targets libfoo_stubs.a dllfoo_stubs.so)
+ (action (progn
+          (chdir libfoo (run make)))
+          (copy libfoo/libfoo.a libfoo_stubs.a)
+          (copy libfoo/libfoo.so dllfoo_stubs.so)))
+          

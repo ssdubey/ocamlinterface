@@ -1,0 +1,5 @@
+(library
+(name eg)
+(c_names stdlib_stubs)
+(c_flags (-I/./lib.a))
+) 

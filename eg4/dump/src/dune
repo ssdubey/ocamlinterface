@@ -1,0 +1,11 @@
+(data_only_dirs ("libfoo"))
+(rule
+ (deps (source_tree libfoo))
+ (targets dllfoo_stubs.so)
+ (action (progn
+          (chdir libfoo (run make)))
+          (copy libfoo/libfoo.a libfoo_stubs.a)
+          (copy libfoo/libfoo.so dllfoo_stubs.so)))
+(library
+ (name bar)
+ (self_build_stubs_archive foo))

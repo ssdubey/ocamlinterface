@@ -1,0 +1,7 @@
+(library
+ (name mylibrary)
+ (libraries ctypes posix-types ctypes.foreign)
+ (c_names mystub))
+(env
+ (dev
+  (flags (:standard -warn-error -A))))

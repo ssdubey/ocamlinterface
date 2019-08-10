@@ -1,0 +1,5 @@
+(library
+(name clibrary)
+(c_names ("lib" "sec_lib"))
+(libraries ctypes posix-types ctypes.foreign))
+

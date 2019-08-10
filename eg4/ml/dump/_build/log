@@ -1,0 +1,11 @@
+# dune build eg.exe
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/dunebfb9c3.output 2> /dev/null
+$ /home/shashank/.opam/switch2/bin/ocamlc.opt -config > /tmp/dune9a4602.output
+$ (cd _build/default && /home/shashank/.opam/switch2/bin/ocamldep.opt -modules -impl eg.ml) > _build/default/.eg.eobjs/eg.ml.d
+$ (cd _build/default && /home/shashank/.opam/switch2/bin/ocamldep.opt -modules -impl header.ml) > _build/default/.eg.eobjs/header.ml.d
+$ (cd _build/default && /home/shashank/.opam/switch2/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .eg.eobjs/byte -I /home/shashank/.opam/switch2/lib/ctypes -I /home/shashank/.opam/switch2/lib/posix-types -no-alias-deps -opaque -o .eg.eobjs/byte/eg.cmo -c -impl eg.ml)
+> File "eg.ml", line 5, characters 31-35:
+> Error: Unbound value unit
+> Hint: Did you mean uint?
+[2]

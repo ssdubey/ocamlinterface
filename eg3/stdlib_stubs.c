@@ -1,4 +1,5 @@
-#include "lib.h"
+
+#define CAML_NAME_SPACE
 #include<stdio.h>
 #include<caml/mlvalues.h>
 #include<caml/alloc.h>
@@ -9,13 +10,15 @@
 #include<caml/intext.h>
 #include<caml/threads.h>
 
-CAMLprim value ocamladds(value a, value b)
+CAMLprim value stub_sum(value a, value b)
 {
-	printf("%c %d", a, b);
+	//printf("step1");
 	CAMLparam2 (a, b);
-	printf("%c %d", a, b);
+	printf("%d %d", Int_val(a), Int_val(b));
+
 	CAMLlocal1 (result);
+	result = sum(Int_val(a), Int_val(b));
 	//result = add(a,b);
-	result = a;
- 	//CAMLreturn(result);
+	//result = a;
+ 	CAMLreturn(Val_int(result));
 }

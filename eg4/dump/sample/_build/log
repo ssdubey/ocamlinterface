@@ -1,0 +1,12 @@
+# dune build sam/sample.exe
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/dune48120c.output 2> /dev/null
+$ /home/shashank/.opam/switch2/bin/ocamlc.opt -config > /tmp/dune8c0817.output
+$ (cd _build/default && /home/shashank/.opam/switch2/bin/ocamldep.opt -modules -impl lib/lib.ml) > _build/default/lib/.lib.objs/lib.ml.d
+> File "lib/lib.ml", line 1, characters 4-7:
+> Error: Syntax error
+[2]
+$ (cd _build/default && /home/shashank/.opam/switch2/bin/ocamldep.opt -modules -impl sam/sample.ml) > _build/default/sam/.sample.eobjs/sample.ml.d
+> File "sam/sample.ml", line 1, characters 5-8:
+> Error: Syntax error
+[2]

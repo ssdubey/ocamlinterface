@@ -1,0 +1,12 @@
+to run this eg. simply run 
+dune build src/file.exe
+dune exec src/file.exe
+
+
+we have specified lib files and src files in different folders and they have different dunes respectively. The dune in the specifies library and source as library and executable respectively. 
+
+the library folder contains the c files and a ml file which specifies the exports of those c files. Dune here calls the c_names over the c libraries and libraries required for the ml file. Specific name is given for this library and used below.
+
+src folder contains only the ml file. its dune is executable type and simply uses the library specified above. 
+
+Dune will be run from the root directory which contains both lib and src and command used is given at the top.

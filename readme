@@ -1,0 +1,4 @@
+eg6 has directory structure and dune files for multiple c files combined together to form a library using ctypes and used in an ml prog.
+
+in eg7 we are doing the same as eg6 but using make. 
+make is somehow not getting called by default. the current status is to create the .so file and .a file manually. rest of the related code in the dune is working fine.

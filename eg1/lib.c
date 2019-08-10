@@ -2,8 +2,8 @@
 #include "lib.h"
 
 int sum (int a, int b){
-	printf("a= %d\nb= %d\nsum= %d\n",a,b,(a+b));
-	return a+b;
+	printf("a= %d\nb= %d\nsum= %d\n",a,b,(a-b));
+	return a-b;
 }
 
 float fsum (float a, float b){

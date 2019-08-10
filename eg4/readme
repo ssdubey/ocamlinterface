@@ -1,0 +1,23 @@
+1. create c lib including header file
+
+2. compile the library to create .o file
+gcc -c mylib.c
+
+3. create the archive file .a
+ar -crv mylib.a mylib.o
+
+check all the .o files in a .a file : ar -t mylib.a
+------------------------------------------------
+1. create stub in c
+------------------------------------------------
+1. create a lib using above two files
+ocamlc -a -o mylib.cma -custom lib.a slib.cmo stdlib_stubs.o
+------------------------------------------------
+1. create an ocaml prog
+2. compile the prog along with the lib created earlier.
+ocamlc -o prog mylib.cma eg.ml
+
+OR
+
+ocamlc -custom -o prog.o eg.ml stdlib_stubs.c lib.a
+

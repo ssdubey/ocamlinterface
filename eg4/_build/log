@@ -1,0 +1,3 @@
+# dune build src/main.ml
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/duned55e2e.output 2> /dev/null

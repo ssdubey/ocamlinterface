@@ -1,0 +1,12 @@
+(rule
+ (deps (source_tree ./cfiles))
+ (targets libclibrary_stubs.a dllclibrary_stubs.so)
+ (action (progn
+          (chdir cfiles (run make))
+          (copy cfiles/clibrary.a libclibrary_stubs.a)
+          (copy cfiles/clibrary.so dllclibrary_stubs.so))))
+(library
+(name clibrary)
+(self_build_stubs_archive (clibrary))
+(libraries ctypes posix-types ctypes.foreign))
+

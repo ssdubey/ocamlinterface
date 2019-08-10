@@ -1,0 +1,3 @@
+# dune build bar
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/dune221414.output 2> /dev/null
